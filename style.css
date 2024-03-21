@@ -856,6 +856,9 @@ width: 260px;
 
     /*Laptop  */
  @media (min-width:1201px) and (max-width: 1600px) { 
+  #slider{
+    display: none;
+    }
     .story{
         font-size:1.2rem;
     }
@@ -879,7 +882,9 @@ width: 260px;
 
  @media (min-width:1601px){ 
     /*PC  */
-    
+    #slider{
+        display: none;
+        }
     #more{
         display: none;
     }
@@ -988,6 +993,7 @@ background-color: transparent;
         z-index: 9;
 
      }
+     
 
 
 
