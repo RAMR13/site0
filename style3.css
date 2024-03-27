@@ -1,0 +1,77 @@
+/* PHONE */
+@media (max-width: 480px) { 
+    #image{
+        background-size: contain !important; 
+
+        margin-top: 55px;
+        height:300px !important;
+        width: 100% !important;
+    }
+    .bigman{
+        flex-direction: column;
+        padding-left:0px !important;
+        padding-right: 0px !important;
+    }
+    .midMan{
+        width: 100%;
+        height: auto;
+    }
+    #buttonsContainer{
+        position: fixed;
+ 
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100% ;
+        z-index: 10;
+    }
+    #sizeSelect div{
+        width: 40px !important;
+        height: 25px !important;
+    }
+
+    #colorSelect div{
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .infoCont{
+        margin-left: 0px !important; 
+        min-height: 100px !important;
+        width: 100% !important;
+        height: auto;
+    }
+    #buttonsCont{
+        width: 100% !important;
+        justify-content: center !important;
+        margin-bottom:0 !important;
+        margin-top:0 !important;
+        margin: 0 !important;
+    }
+    #cart_button{
+width: 90% !important;
+border-radius: 0 !important;
+    }
+    #thumbnails{
+display: none !important;
+    }
+    #heart{
+        border-radius: 0 !important;
+        background-color: whitesmoke;
+        width: 10% !important;
+    }
+    .stuff{
+        width: 100% !important;
+    }
+
+}
+/* TABLET */
+@media (min-width:481px) and (max-width: 1200px) {
+   
+}
+   
+/* LAPTOP */
+@media (min-width:1201px) and (max-width: 1600px) { 
+}
+/* PC */
+@media (min-width:1601px){ 
+}

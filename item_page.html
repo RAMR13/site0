@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style3.css"/>
+    <link rel="stylesheet" href="./style2.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<script>
+     $(function(){
+      $("#includedFooter").load("footer.html"); 
+    });
+</script>
+<body style="margin: 0; background-color: whitesmoke !important; ">
+    <div class="menu scrolls subpage" id="header" onmouseenter="closeM()" >
+      <div class="width_logo">  <a href="index.html">   <div class="logo">   <!-- logo --></div></a></div>
+          <div class="menuItems">
+              <!--menu items  -->
+              <div id="subM" onmouseenter="toggleMenuM()">
+                Men
+              </div>
+              <div>
+                  Women
+              </div>
+              <div>
+                 Kids
+              </div>
+              <div>
+                  Accessories
+              </div>
+          </div>      
+      <div class="circles_and_search">
+          <input class="txtfield" id="search" type="text" placeholder="Search">
+          <container class="circles">
+          <div class="circle" id="prof">
+          </div>
+          <div class="circle" id="cart">
+          </div>
+          <div class="circle" id="more" onclick="openMore()">
+          </div>
+        </container>
+      </div>
+    </div>
+  
+
+<div class="bigman" style="background-color: whitesmoke;  align-items: start; margin-top: 20px !important; ">
+    <container class="midMan">
+        <container>
+            <div style="display: flex;" id="image_and_thumbs"> <!--  -->
+            <div class="page_img" id="thumbnails" >  
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="page_img" id="image"></div>
+        </div>  <!--  -->
+        </container>
+        <!-- ssssssssssssssssssssss -->
+        <div class="page_img infoCont mobileInfo">
+            <container>
+            <container style="display: flex; flex-direction: column; ">
+                <p  class="m_left" style="color: #1c1c1c; font-size: 2rem; margin-bottom: 0; font-weight: 400; margin-top: 20px !important; ">Nike Dunk Low Retro</p>
+            <p class="m_left" style="color: #1c1c1c; font-size: 1.3rem;">Men's Shoes</p>
+            <p class="m_left" style="color: #1c1c1c; font-size: 1.3rem;">$125</p>
+            <p class="m_left" style="color: #1c1c1c; font-size: 1.3rem;">Color: Grey</p>
+        
+            <container id="colorSelect">
+                <div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div>
+                </container>
+        
+            <p class="m_left" style="color: #1c1c1c; font-size: 1.3rem;">Select Size</p>
+            <container id="sizeSelect" style=" display: grid; width: min-content;">
+            <div>XS</div><div>S</div><div>M</div><div>L</div><div>XL</div>
+            <div>XXL</div><div>XXXL</div><div>XXXXL</div><div>XXXXXL</div>
+            </container>
+        </container>
+        </container>
+        
+        <container id="buttonsContainer">
+            <div id="buttonsCont" >
+            <div id="cart_button">Add to Cart</div>
+            <div id="heart"></div>
+        </div>
+        </container>
+        </container>
+            </div>
+        <!-- ssssssssssssssssssssss -->
+        <container class="stuffs">
+        <div class="stuff" style=" border-top: solid 1px #dfdfdf;"><p>Product Details</p> <svg focusable="false" viewBox="0 0 24 24" width="24" height="24" class="pip-svg-icon" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="m20.0008 12.0001-8-8.001-1.4143 1.414L16.1727 11H4v2h12.1723l-5.5868 5.5866 1.4141 1.4142 8.0012-8.0007z"></path></svg></div>
+        <div class="stuff"><p>Material Information</p> <svg focusable="false" viewBox="0 0 24 24" width="24" height="24" class="pip-svg-icon" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="m20.0008 12.0001-8-8.001-1.4143 1.414L16.1727 11H4v2h12.1723l-5.5868 5.5866 1.4141 1.4142 8.0012-8.0007z"></path></svg></div>
+        <div class="stuff"><p>Reviews</p> <div class="button" style="box-shadow: none; background-color: rgb(43, 43, 43); color: whitesmoke;">Add a Review</div></div>
+        </container>
+        
+</container>
+   
+<div class="page_img infoCont pcInfo">
+    <container>
+    <container style="display: flex; flex-direction: column; ">
+        <p style="color: #1c1c1c; font-size: 2rem; margin-bottom: 0; font-weight: 400; margin-top: 20px !important; ">Nike Dunk Low Retro</p>
+    <p style="color: #1c1c1c; font-size: 1.3rem;">Men's Shoes</p>
+    <p style="color: #1c1c1c; font-size: 1.3rem;">$125</p>
+    <p style="color: #1c1c1c; font-size: 1.3rem;">Color: Grey</p>
+
+    <container id="colorSelect" style="display: grid; width: min-content;">
+        <div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div>
+        </container>
+
+    <p style="color: #1c1c1c; font-size: 1.3rem;">Select Size</p>
+    <container id="sizeSelect" style=" display: grid; width: min-content;">
+    <div>XS</div><div>S</div><div>M</div><div>L</div><div>XL</div>
+    <div>XXL</div><div>XXXL</div><div>XXXXL</div><div>XXXXXL</div>
+    </container>
+</container>
+</container>
+
+<container id="buttonsContainer">
+    <div id="buttonsCont" >
+    <div id="cart_button">Add to Cart</div>
+    <div id="heart"></div>
+</div>
+</container>
+</container>
+    </div>
+</div>
+<!-- you may also like  8 items-->
+<div style="width: 100%; display: flex; justify-content: center;">
+<div class="mayLike" style="width: 80%; margin-top: 120px; margin-bottom: 20px; ">
+<div class="mayLikeText" style="font-size: 2rem; color: #1c1c1c; margin-bottom: 20px;">You May Also Like</div>
+<div class="mayLikeCont" style="display: flex; gap: 12px !important;  overflow-x: scroll;  margin-bottom: 20px;"> 
+  <div class="product_item" onmouseenter="toggleThumbnail('0') " onmouseleave="byeThumbnail('0')">
+        <div class="info_price">$139.99</div>
+        <div class="info" id="info0">
+            <p>Adios running shoes</p>
+            <p id="info_sub">Men's shoes</p>
+            <p id="info_sub"> 5 colors</p>
+            <!-- <div class="thumbnail"></div>
+            <div  class="thumbnail">  </div>
+            <div  class="thumbnail"></div> -->
+        </div>
+        
+        <div class="product_img"></div> 
+    </div>
+
+    <div class="product_item" onmouseenter="toggleThumbnail('0') " onmouseleave="byeThumbnail('0')">
+        <div class="info_price">$139.99</div>
+        <div class="info" id="info0">
+            <p>Adios running shoes</p>
+            <p id="info_sub">Men's shoes</p>
+            <p id="info_sub"> 5 colors</p>
+            <!-- <div class="thumbnail"></div>
+            <div  class="thumbnail">  </div>
+            <div  class="thumbnail"></div> -->
+        </div>
+        
+        <div class="product_img"></div> 
+    </div>
+     <div class="product_item" onmouseenter="toggleThumbnail('0') " onmouseleave="byeThumbnail('0')">
+            <div class="info_price">$139.99</div>
+            <div class="info" id="info0">
+                <p>Adios running shoes</p>
+                <p id="info_sub">Men's shoes</p>
+                <p id="info_sub"> 5 colors</p>
+                <!-- <div class="thumbnail"></div>
+                <div  class="thumbnail">  </div>
+                <div  class="thumbnail"></div> -->
+            </div>
+            
+            <div class="product_img"></div> 
+        </div>
+        <div class="product_item" onmouseenter="toggleThumbnail('0') " onmouseleave="byeThumbnail('0')">
+            <div class="info_price">$139.99</div>
+            <div class="info" id="info0">
+                <p>Adios running shoes</p>
+                <p id="info_sub">Men's shoes</p>
+                <p id="info_sub"> 5 colors</p>
+                <!-- <div class="thumbnail"></div>
+                <div  class="thumbnail">  </div>
+                <div  class="thumbnail"></div> -->
+            </div>
+            
+            <div class="product_img"></div> 
+        </div>
+        <div class="product_item" onmouseenter="toggleThumbnail('0') " onmouseleave="byeThumbnail('0')">
+            <div class="info_price">$139.99</div>
+            <div class="info" id="info0">
+                <p>Adios running shoes</p>
+                <p id="info_sub">Men's shoes</p>
+                <p id="info_sub"> 5 colors</p>
+                <!-- <div class="thumbnail"></div>
+                <div  class="thumbnail">  </div>
+                <div  class="thumbnail"></div> -->
+            </div>
+            
+            <div class="product_img"></div> 
+        </div>
+        <div class="product_item" onmouseenter="toggleThumbnail('0') " onmouseleave="byeThumbnail('0')">
+            <div class="info_price">$139.99</div>
+            <div class="info" id="info0">
+                <p>Adios running shoes</p>
+                <p id="info_sub">Men's shoes</p>
+                <p id="info_sub"> 5 colors</p>
+                <!-- <div class="thumbnail"></div>
+                <div  class="thumbnail">  </div>
+                <div  class="thumbnail"></div> -->
+            </div>
+            
+            <div class="product_img"></div> 
+        </div>
+
+    
+</div>
+
+
+
+
+</div>
+
+</div>
+<!-- you may also like  8 items-->
+
+<div id="includedFooter"></div>
+
+</body>
+</html>

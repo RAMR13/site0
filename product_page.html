@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./style2.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+
+    var div = document.querySelector(".product_item");
+    var parentDiv = document.querySelector(".productGrid");
+
+    for (var i = 0; i < 12; i++) {
+        var clonedDiv = div.cloneNode(true); // Clone the div
+        parentDiv.appendChild(clonedDiv);
+    }
+    parentDiv.addEventListener("mouseenter", function(event) {
+        // Check if the mouse entered an element with the class "product_item"
+        if (event.target.classList.contains("product_item")) {
+            toggleThumbnail(event);
+        }
+    });
+     parentDiv.addEventListener("mouseleave", function(event) {
+        // Check if the mouse left an element with the class "product_item"
+        if (event.target.classList.contains("product_item")) {
+            byeThumbnail(event);
+        }
+    });
+});
+window.onscroll = function(e) {
+  console.log(this.oldScroll > this.scrollY);
+  var header=document.querySelector('.subpage');
+  var filterBar=document.querySelector('.filterBar')
+  if(this.oldScroll > this.scrollY){
+    header.classList.remove('scrolldown');
+    filterBar.classList.add('scrollup');
+}
+else { header.classList.add('scrolldown');
+filterBar.classList.remove('scrollup');}
+  this.oldScroll = this.scrollY;
+ 
+}
+   function toggleThumbnail(index){
+    var info=  document.querySelector('#info'+index);
+    setTimeout(function() {info.classList.add("fadeout")}, 1)
+    setTimeout(function() { if(!info.classList.contains("thumbnail")){
+  info.innerHTML = `<div class="thumbnail"></div>
+                    <div  class="thumbnail"></div>
+                    <div  class="thumbnail"></div>
+                    <div  class="thumbnail"></div>
+
+                    <div  class="thumbnail" id="last">+2</div>`
+    info.classList.add("thumbnail");
+    }}, 150)
+    setTimeout(function() {info.classList.remove("fadeout")}, 301)
+    }
+    function byeThumbnail(index){
+    var info=  document.querySelector('#info'+index);
+
+        info.classList.remove("thumbnail");
+        info.innerHTML=`<p>Adios running shoes</p>
+                <p id="info_sub">Men's shoes</p>
+                <p id="info_sub"> 5 colors</p>`
+}
+</script>
+<body>
+    <div class="menu scrolls subpage" id="header" onmouseenter="closeM()" >
+        <div class="width_logo">  <div class="logo">   <!-- logo --></div></div>
+          <div class="menuItems">
+              <!--menu items  -->
+              <div id="subM" onmouseenter="toggleMenuM()">
+                Men
+              </div>
+              <div>
+                  Women
+              </div>
+              <div>
+                 Kids
+              </div>
+              <div>
+                  Accessories
+              </div>
+          </div>      
+      <div class="circles_and_search">
+          <input class="txtfield" id="search" type="text" placeholder="Search">
+          <container class="circles">
+          <div class="circle" id="prof">
+          </div>
+          <div class="circle" id="cart">
+          </div>
+          <div class="circle" id="more" onclick="openMore()">
+          </div>
+        </container>
+      </div>
+    </div>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1>ssssssssssss</h1>
+<h1>ssssssssssss</h1>
+
+    <div class="filterBar">
+        <i class="fa fa-filter"   style="font-size:24px; color: #3b3b3b;"></i>
+
+        <div class="btn-group">
+            <button style="height: 30px;  overflow: hidden !important;
+            width: 90px; color: #000; font-size: 1.1rem; " type="button" class="btn btn-outline-secondary  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Action
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button style="height: 30px; width: 90px; color: #000; font-size: 1.1rem; " type="button" class="btn btn-outline-secondary  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Action
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button style="height: 30px; width: 90px; color: #000; font-size: 1.1rem; " type="button" class="btn btn-outline-secondary  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Action
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button style="height: 30px; width: 90px; color: #000; font-size: 1.1rem; " type="button" class="btn btn-outline-secondary  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Action
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button style="height: 30px; width: 90px; color: #000; font-size: 1.1rem; " type="button" class="btn btn-outline-secondary  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Action
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+    </div>
+    <div class="bigman" >
+    <div class="productGrid">
+      <a href="item_page.html"> <div class="product_item" onmouseenter="toggleThumbnail('0') " onmouseleave="byeThumbnail('0')">
+            <div class="info_price">$139.99</div>
+            <div class="info" id="info0">
+                <p>Adios running shoes</p>
+                <p id="info_sub">Men's shoes</p>
+                <p id="info_sub"> 5 colors</p>
+                <!-- <div class="thumbnail"></div>
+                <div  class="thumbnail">  </div>
+                <div  class="thumbnail"></div> -->
+            </div>
+            
+            <div class="product_img"></div> 
+        </div>
+      </a> 
+        <div class="product_item"  onmouseenter="toggleThumbnail('1') " onmouseleave="byeThumbnail('1')">
+          <div class="info_price">$13s.99</div>
+          <div class="info" id="info1" >
+              <p>Adios running shoes</p>
+              <p id="info_sub">Men's shoes</p>
+              <p id="info_sub"> 5 colors</p>
+              <!-- <div class="thumbnail"></div>
+              <div  class="thumbnail">  </div>
+              <div  class="thumbnail"></div> -->
+          </div>
+          
+          <div class="product_img"></div> 
+      </div>
+      <div class="product_item"  onmouseenter="toggleThumbnail('2') " onmouseleave="byeThumbnail('2')">
+        <div class="info_price">$13s.99</div>
+        <div class="info" id="info2" >
+            <p>Adios running shoes</p>
+            <p id="info_sub">Men's shoes</p>
+            <p id="info_sub"> 5 colors</p>
+            <!-- <div class="thumbnail"></div>
+            <div  class="thumbnail">  </div>
+            <div  class="thumbnail"></div> -->
+        </div>
+        
+        <div class="product_img"></div> 
+    </div>
+       
+</div>
+</body>
+</html>
