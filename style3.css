@@ -1,16 +1,39 @@
 /* PHONE */
 @media (max-width: 480px) { 
+    #footer{
+       margin-bottom: 50px;
+       border-radius:10px 10px 0px 0px ;
+    }
     #image{
         background-size: contain !important; 
-
         margin-top: 55px;
-        height:300px !important;
+        height:350px !important;
         width: 100% !important;
+    }
+    .mayLikeText{
+        margin-left: 10px;
+    }
+    .m_left{
+        margin-left: 10px !important;
+    }
+    .mayLikeCont div:nth-of-type(1){
+        margin-left: 10px;
+    }
+    .mayLikeCont > div:last-of-type { 
+        margin-right: 10px;
+    }
+    .mayLike{
+width: 100% !important;
     }
     .bigman{
         flex-direction: column;
         padding-left:0px !important;
         padding-right: 0px !important;
+    }
+    .pcInfo{
+        display: none !important;
+    }
+    .stuffs{
     }
     .midMan{
         width: 100%;
@@ -25,21 +48,55 @@
         width: 100% ;
         z-index: 10;
     }
+#sizeSelect div:nth-of-type(1){
+    margin-left: 10px;
+}
+#sizeSelect div:last-of-type{
+    margin-right: 10px;
+    
+}
+#colorSelect div:last-of-type{
+    margin-right: 10px;
+    
+}
+#colorSelect div:nth-of-type(1){
+    margin-left: 10px;
+}
     #sizeSelect div{
-        width: 40px !important;
+        flex: none;
+        width: max-content !important;
+        min-width: 20px;
+        padding-left: 5px ;
+        padding-right: 5px ;
         height: 25px !important;
     }
 
     #colorSelect div{
         width: 50px !important;
         height: 50px !important;
+        flex: none !important;
     }
+  
     .infoCont{
+        margin-top: 0px !important;
         margin-left: 0px !important; 
-        min-height: 100px !important;
+        min-height: min-content !important;
         width: 100% !important;
         height: auto;
+        align-items: start !important;
+        
     }
+    #colorSelect{
+        display: flex !important;
+        width: 100% !important;
+        overflow-x: scroll !important;
+         
+    }
+#sizeSelect{
+    display: flex !important;
+    width: 100% !important;
+    overflow-x: scroll !important;
+}
     #buttonsCont{
         width: 100% !important;
         justify-content: center !important;
@@ -48,7 +105,8 @@
         margin: 0 !important;
     }
     #cart_button{
-width: 90% !important;
+        height: 100%;
+width: 85% !important;
 border-radius: 0 !important;
     }
     #thumbnails{
@@ -57,21 +115,36 @@ display: none !important;
     #heart{
         border-radius: 0 !important;
         background-color: whitesmoke;
-        width: 10% !important;
+        height: 100%;
+        width: 15% !important;
     }
     .stuff{
         width: 100% !important;
+    }
+    .width_logo{
+        width: 80px !important;
+    }
+    .mobileInfo{
+display: block !important;
     }
 
 }
 /* TABLET */
 @media (min-width:481px) and (max-width: 1200px) {
-   
+    .mobileInfo{
+        display: none !important;;
+    }
 }
    
 /* LAPTOP */
 @media (min-width:1201px) and (max-width: 1600px) { 
+    .mobileInfo{
+        display: none !important;
+    }
 }
 /* PC */
 @media (min-width:1601px){ 
+    .mobileInfo{
+        display: none !important;;
+    }
 }
