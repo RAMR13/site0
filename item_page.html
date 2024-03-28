@@ -7,16 +7,49 @@
     <link rel="stylesheet" href="./style3.css"/>
     <link rel="stylesheet" href="./style2.css"/>
     <link rel="stylesheet" href="./style.css"/>
-
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./star-rating-font-awesome/dist/jquery.star-rating.js"></script>
+
+    <script src="https://kit.fontawesome.com/1a2f40b16c.js" crossorigin="anonymous"></script>
+
+
 
 </head>
-<script>
+
+
+<script> 
+
      $(function(){
       $("#includedFooter").load("footer.html"); 
     });
+    
+    function openOverlay(num){
+var sheet=document.querySelector('.bottomSheet');
+sheet.classList.add('open');
+var shadow=document.querySelector('.bottomSheetShadow');
+setTimeout(function() { shadow.classList.add('begin'); }, 10);
+setTimeout(function() {shadow.classList.add('open'); }, 20);
+    }
+    function closeOverlay(){
+var sheet=document.querySelector('.bottomSheet');
+sheet.classList.remove('open');
+var shadow=document.querySelector('.bottomSheetShadow');
+
+setTimeout(function() {shadow.classList.remove('open'); }, 10);
+setTimeout(function() { shadow.classList.remove('begin'); }, 400);
+    }
+    function openReview(){
+        var shadow=document.querySelector('.shadowOverlay');
+        setTimeout(function() { shadow.classList.add('begin'); }, 10);
+        setTimeout(function() {shadow.classList.add('open'); }, 20);
+        
+    }
+    function closeReview(){
+        var shadow=document.querySelector('.shadowOverlay');
+        setTimeout(function() {shadow.classList.remove('open'); }, 10);
+setTimeout(function() { shadow.classList.remove('begin'); }, 400);
+    }
 </script>
 <body style="margin: 0; background-color: whitesmoke !important; ">
     <div class="menu scrolls subpage" id="header" onmouseenter="closeM()" >
@@ -51,7 +84,7 @@
   
 
 <div class="bigman" style="background-color: whitesmoke;  align-items: start; margin-top: 20px !important; ">
-    <container class="midMan">
+    <container class="midMan" style="margin-top: 75px;">
         <container>
             <div style="display: flex;" id="image_and_thumbs"> <!--  -->
             <div class="page_img" id="thumbnails" >  
@@ -76,16 +109,16 @@
             <container>
             <container style="display: flex; flex-direction: column; ">
                 <p  class="m_left" style="color: #1c1c1c; font-size: 2rem; margin-bottom: 0; font-weight: 400; margin-top: 20px !important; ">Nike Dunk Low Retro</p>
-            <p class="m_left" style="color: #1c1c1c; font-size: 1.3rem;">Men's Shoes</p>
-            <p class="m_left" style="color: #1c1c1c; font-size: 1.3rem;">$125</p>
-            <p class="m_left" style="color: #1c1c1c; font-size: 1.3rem;">Color: Grey</p>
+            <p class="m_left category" style="color: #1c1c1c; font-size: 1.3rem;">Men's Shoes</p>
+            <p class="m_left price" style="color: #1c1c1c; font-size: 1.3rem;">$125</p>
+            <p class="m_left mzero" style="color: #1c1c1c; font-size: 1.3rem;">Color: Grey</p>
         
             <container id="colorSelect">
                 <div></div><div></div><div></div><div></div><div></div>
                 <div></div><div></div><div></div><div></div>
                 </container>
         
-            <p class="m_left" style="color: #1c1c1c; font-size: 1.3rem;">Select Size</p>
+            <p class="m_left mzero" style="color: #1c1c1c; font-size: 1.3rem; ">Select Size</p>
             <container id="sizeSelect" style=" display: grid; width: min-content;">
             <div>XS</div><div>S</div><div>M</div><div>L</div><div>XL</div>
             <div>XXL</div><div>XXXL</div><div>XXXXL</div><div>XXXXXL</div>
@@ -103,9 +136,9 @@
             </div>
         <!-- ssssssssssssssssssssss -->
         <container class="stuffs">
-        <div class="stuff" style=" border-top: solid 1px #dfdfdf;"><p>Product Details</p> <svg focusable="false" viewBox="0 0 24 24" width="24" height="24" class="pip-svg-icon" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="m20.0008 12.0001-8-8.001-1.4143 1.414L16.1727 11H4v2h12.1723l-5.5868 5.5866 1.4141 1.4142 8.0012-8.0007z"></path></svg></div>
-        <div class="stuff"><p>Material Information</p> <svg focusable="false" viewBox="0 0 24 24" width="24" height="24" class="pip-svg-icon" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="m20.0008 12.0001-8-8.001-1.4143 1.414L16.1727 11H4v2h12.1723l-5.5868 5.5866 1.4141 1.4142 8.0012-8.0007z"></path></svg></div>
-        <div class="stuff"><p>Reviews</p> <div class="button" style="box-shadow: none; background-color: rgb(43, 43, 43); color: whitesmoke;">Add a Review</div></div>
+        <div class="stuff" onclick="openOverlay()" style=" border-top: solid 1px #dfdfdf;"><p>Product Details</p> <svg class="margin_r" focusable="false" viewBox="0 0 24 24" width="24" height="24" class="pip-svg-icon" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="m20.0008 12.0001-8-8.001-1.4143 1.414L16.1727 11H4v2h12.1723l-5.5868 5.5866 1.4141 1.4142 8.0012-8.0007z"></path></svg></div>
+        <div class="stuff"><p>Material Information</p> <svg class="margin_r" focusable="false" viewBox="0 0 24 24" width="24" height="24" class="pip-svg-icon" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="m20.0008 12.0001-8-8.001-1.4143 1.414L16.1727 11H4v2h12.1723l-5.5868 5.5866 1.4141 1.4142 8.0012-8.0007z"></path></svg></div>
+        <div class="stuff"><p>Reviews</p> <div class="button" style="margin-right: 10px; box-shadow: none; background-color: rgb(43, 43, 43); color: whitesmoke; min-width: 110px !important; height: 40px;" onclick="openReview()">Add a Review</div></div>
         </container>
         
 </container>
@@ -237,6 +270,46 @@
 <!-- you may also like  8 items-->
 
 <div id="includedFooter"></div>
+<div class="bottomSheet" style="display: none; height: 80vh; position: fixed; bottom: 0; z-index: 12; width: 100vw; background-color: rgb(255, 255, 255); border-radius: 10px 10px 0px 0px; "> <div style="color: #1c1c1c; font-size: 2rem; margin-top: 15px; margin-left: 10px;">Product Details</div>  </div>
+<div class="bottomSheetShadow" onclick="closeOverlay()" style="display: none; height: 100vh; position: fixed; bottom: 0; z-index: 11; width: 100vw; background-color: rgba(0, 0, 0, 0.562);"></div>
+<script>
+$(document).ready(function() {
 
+  $('.rating').starRating({
+    starIconEmpty:'fa fa-star',
+    starIconFull:'fa fa-star',
+  starColorEmpty: '#AAAAAA',
+  starColorFull: '#3C3C3C',
+  starsSize: 3, // em
+  stars: 5,
+  titles: ["Very Bad", "Poor", "Ok", "Good", "Excellent!"],
+  showInfo: true,
+  inputName: 'rating',
+
+}
+);
+let starIcons=['fa-sad-tear','fa-frown', 'fa-meh', 'fa-smile', 'fa-grin-stars'];
+
+$(document).on('change', '.rating', function (e, stars, index) {
+    index-=1;
+    $('.faIcon').removeClass().addClass('fa-solid '+ starIcons[index]);
+
+});
+
+$('.rating')
+    .val('two')
+    .trigger('change');
+});
+
+  </script>
+<div class="shadowOverlay" style="height: 100vh; width: 100vw; z-index:19;  position: fixed; top: 0; display: flex; justify-content: center; align-items: center;" >
+   <div class="SO" style="height: 100vh; width: 100vw; background-color:rgba(0, 0, 0, 0.459); position: fixed; top: 0; " onclick="closeReview()"></div>
+        <div style="font-size: 1rem; height:200px; width: 75%; position: fixed; border-radius: 10px; background-color: rgba(255, 255, 255, 0.623); backdrop-filter: blur(12px); color: #0e0e0ec7; display: flex; justify-content: center; flex-direction: column; align-items: center; gap: 20px;">
+            <div class="rating"></div>
+
+        </div>
+
+
+</div>
 </body>
 </html>
