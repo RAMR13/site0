@@ -113,6 +113,7 @@ background-repeat: no-repeat;
     overflow: scroll;
     
 }
+
 .cats{
     gap:15px;
     display: grid;
@@ -773,6 +774,29 @@ gap: 18px;
 }
 .product{
     border-radius: 15px  !important;
+}
+.menu_back{
+    margin-left: 20px;
+}
+.menu_back_hidden{
+    opacity: 0;
+    margin-right: 20px;
+}
+.appbar{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.cats{
+    margin-top: 75px;
+    gap: 10px;
+}
+.cats div{
+    border-radius: 10px;
+    gap: 2px;
+}
+#catM{
+    align-items: start;
 }
   }
 

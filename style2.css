@@ -1,13 +1,14 @@
 body{
     background-color: whitesmoke !important;
 }
+
+.btn-group button{
+}
 .productGrid{
-    gap: 8px;
-    margin-top: 100px;
+    gap:15px;
+    margin-top: 40px;
     display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 100% ;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
 }
 .subpage.scrolldown{
     overflow: hidden;
@@ -17,9 +18,11 @@ body{
     height: 75px !important; 
     transition: 0.25s !important;
 }
+
 .filterBar{
     top: 0px;
-    border-bottom: #0707073f solid 1px;
+    border-bottom: #07070718 solid 1px;
+    border-top: #07070718 solid 1px;
     gap: 10px;
     display: flex;
     justify-content: start;
@@ -32,6 +35,7 @@ body{
      line-height: normal !important;
      transition: .25s; 
 }
+
 .filterBar.scrollup{
     top: 75px;
 }
@@ -56,10 +60,32 @@ width: auto !important;
     flex-direction: column;
     justify-content: flex-end;
     align-items: end;
-    height: 450px;
     background-color: whitesmoke;
-    border-radius: 15px;
+    border-radius: 7px;
     overflow: hidden;
+}
+
+.address {
+    padding: 0;
+    font-size: 0.8rem !important;
+    display: flex;
+    color: #1c1c1c;
+    list-style: none;
+    margin-top: 120px;
+    align-items: center;
+    
+}
+.address li{
+    font-size: 1.3rem;
+}
+.gap{
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 999px;
+    height: 0.3rem;
+    width: 0.3rem;
+    background-color: grey;
 }
 .info.fadeout{
     opacity: 0;
@@ -171,7 +197,7 @@ margin-left: 2px;
 
 #thumbnails{
     height: 600px  !important;
-    width: 100px !important;
+    width: 100px;
     display: flex;
     gap: 10px;
     flex-direction: column;
@@ -181,8 +207,8 @@ overflow-y: scroll;
 flex: none;
 }
 #thumbnails div{
-    width: 65px  !important;
-    height: 65px  !important;
+    width: 65px ;
+    height: 65px;
     background-color: rgb(255, 94, 83);
     border-radius: 5px;
     flex: none;
@@ -212,7 +238,8 @@ flex: none;
             justify-content: space-between;
 }
 #image{
-    height: 600px; width: 500px; 
+    height: 600px;
+     width: 500px; 
     flex: none;
     background-color: rgb(224, 224, 224);
       background-image: url(./assets/jacket.webp);
@@ -247,6 +274,10 @@ flex: none;
     border-radius: 4px;
     border: solid #aaaaaa 1px;
 }
+.marginleft{
+    /* margin-left: 200px; */
+    margin-left:10%;
+}
 #buttonsCont{
     margin: 10px ;
     margin-top: 30px ;
@@ -273,6 +304,7 @@ background-size: 50%;
 background-repeat: no-repeat;
 border-radius: 5px;
     border: solid rgb(110, 110, 110) 1px;
+    
 width: 50px;
 }
 .stuff{
@@ -289,3 +321,272 @@ width: 50px;
 .stuff p{
     margin-left: 12px;
 }
+.buttonrev{
+    margin-right: 10px !important; 
+    box-shadow: none !important; 
+    background-color: rgb(43, 43, 43) !important;
+     color: whitesmoke; min-width: 110px !important;
+      height: 40px !important;
+}
+.stuffs{
+    display: block ;
+    margin-top: 0px;
+
+}
+
+
+a{
+    text-decoration: none;
+}
+@media (max-width: 480px) { 
+    .filterSheet .accordion #flush-collapseTwo  #sizeSelect div{
+        width: 20vw !important;
+        text-overflow: ellipsis;
+        max-lines: 1;
+        overflow:hidden;
+        height: 45px;
+    }
+     #filter_apply_button{
+        width: 80vw !important;
+     }
+    .accordion{
+        width: 80vw !important;
+    }
+    .filterSheet.open{
+        height: 100vh ;
+        width: 85vw !important;
+        max-width: 480px;
+    }
+    .bigDevices-filter{
+        display: none;
+    }
+    .filterBar{
+        justify-content: space-between;
+        width: 100% !important;
+    }
+    .productGrid{
+        gap: 7px ;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 10px;
+    }
+
+.product_item{
+    width: 47vw;
+    height: 50vh;
+}
+.bigman{
+    padding-left: 0px ;
+    padding-right: 0px ;
+}
+.address{
+    margin-top:90px !important;
+}
+}
+
+@media (min-width:481px) and (max-width: 1200px) {
+
+    .dropdown-menu{
+       z-index: 100 !important;
+       max-height: 200px !important;
+    }
+    .filterBar{
+        width: 100% !important;
+    }
+    .productGrid{
+        gap: 7px ;
+        grid-auto-columns: auto;
+        grid-template-columns:1fr 1fr;
+        margin-top: 10px;
+    }
+
+.product_item{
+    width: 48vw;
+    height: 48vh;
+}
+
+.address{
+    margin-top:90px !important;
+}
+}
+
+@media (min-width:600px) and (max-width: 1200px) {
+
+    .address{
+        margin-top:110px !important;
+    }
+    .productGrid{
+        gap: 7px ;
+        grid-auto-columns: auto;
+        grid-template-columns:1fr 1fr 1fr;
+        margin-top: 10px;
+    }
+    .product_item{
+        width: 30vw;
+        height: 48vh;
+    }
+    .bigDevices-filter{
+        display: flex;
+        gap: 5px;
+        width: 100%;
+    }
+}
+
+
+@media (min-width:481px) and (max-width: 900px) {
+ 
+    
+    .bigDevices-filter{
+        display: none;
+    }
+    .filterBar{
+        width: 100% !important;
+    }
+    .filterBar{
+        justify-content:space-between;
+    }
+}
+
+
+@media (min-width:900px){
+    .bigDevices-filter{
+        display: flex;
+        gap: 5px;
+        width: 100%;
+    }
+    .filter-button{
+        display: none;
+    }
+
+}
+.sort{
+    margin-right: 4vw;
+}
+.filter-button{
+  margin-left: 4vw;
+}
+
+.filterSheet{
+    overflow: hidden;
+     height: 100vh;
+      position: fixed;
+      bottom: 0;
+       left: 0;
+        z-index: 12;
+         width: 0vw;
+          background-color: rgb(255, 255, 255);
+           border-radius: 0px 10px 10px 0px;
+            display: none !important;
+            height: 100vh ;
+            /* comeback */
+            transition: 0.4s;
+        }
+        .filterSheet.begin{
+            display: flex !important;
+        }
+  .filterSheet.open{
+            height: 100vh ;
+            width: 50vw ;
+            max-width: 480px;
+        }
+    .filterSheetShadow{
+        display: none;
+        height: 100vh !important;
+        opacity: 0;
+        transition: 0.4s;
+            }
+        
+            .filterSheetShadow.open{
+                opacity: 100 !important;
+            }
+            .filterSheetShadow.begin{
+                display: block !important;
+            }
+            .filterSheet  .accordion{
+width: 46vw;
+margin-bottom: 10px;
+    --bs-accordion-bg:white !important;
+    --bs-accordion-btn-bg:white !important;
+    --bs-accordion-color: #696969 !important; 
+    --bs-accordion-border-color:rgba(255, 255, 255, 0.295) !important;
+    --bs-accordion-active-color:rgb(255, 255, 255)tant; 
+    --bs-accordion-active-bg:white !important;
+    --bs-accordion-btn-bg: white !important;
+    --bs-accordion-btn-focus-box-shadow: none !important;
+    --bs-accordion-active-bg: white !important;
+    --bs-accordion-icon-color:  white !important;
+--bs-accordion-button-focus-border-color: solid rgb(80, 80, 80) 2px !important;
+--bs-accordion-btn-padding-x:0px !important;
+
+            }
+            .product_pagecolor div{
+                border: 1px solid rgba(2, 2, 2, 0.329);
+                border-radius: 999px !important;
+                height: 45px !important;
+                width: 45px !important;
+            } 
+            .filterSheet .accordion .accordion-button{
+                font-size:1.4rem !important;
+            }
+            .product_pagecolor {
+                gap: 10px !important;
+          
+                width: 50vw !;
+            }
+            .filterSheet .accordion #flush-collapseTwo  #sizeSelect div{
+width: 10vw;
+text-overflow: ellipsis;
+max-lines: 1;
+overflow:hidden;
+height: 45px;
+            }
+            .dropdown-menu #sizeSelect div{
+                width: 10vw !important;
+                text-overflow: ellipsis;
+                max-lines: 1;
+                overflow:hidden;
+                height: 45px ;
+            }
+            .product_pagecolor  div:nth-of-type(1){
+                background-color: rgb(31, 31, 31) !important;
+            }
+            .product_pagecolor  div:nth-of-type(2){
+                background-color: rgb(107, 107, 107) !important;
+            }
+            .product_pagecolor div:nth-of-type(3){
+                background-color: rgb(22, 61, 231) !important;
+            }
+            .product_pagecolor  div:nth-of-type(4){
+                background-color: rgb(35, 160, 41) !important;
+            }
+            .product_pagecolor div:nth-of-type(5){
+                background-color: rgb(255, 211, 17) !important;
+            }
+            .product_pagecolor  div:nth-of-type(6){
+                background-color: rgb(230, 28, 28) !important;
+            }
+            .product_pagecolor  div:nth-of-type(7){
+                background-color: rgb(248, 248, 248) !important;
+            }
+            .product_pagecolor  div:nth-of-type(8){
+                background-color: rgb(255, 173, 198) !important;
+            }
+            .product_pagecolor div:nth-of-type(9){
+                background-color: rgb(203, 171, 255) !important;
+            }
+            #filter_apply_button{
+
+                position: absolute;
+             
+            color: whitesmoke;
+                border-radius: 0;
+                box-shadow: none;
+                background-color: #1c1c1c;
+                height:50px;
+                width: 46vw;
+               
+            }
+     .dropdown-menu{
+      border-radius: 7px;
+      padding: 10px;
+      box-shadow: #00000052 10px 10px 20px;
+     }

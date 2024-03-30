@@ -87,6 +87,7 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
     <container class="midMan" style="margin-top: 75px;">
         <container>
             <div style="display: flex;" id="image_and_thumbs"> <!--  -->
+                
             <div class="page_img" id="thumbnails" >  
             <div></div>
             <div></div>
@@ -101,7 +102,30 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
             <div></div>
             <div></div>
         </div>
-        <div class="page_img" id="image"></div>
+        <div class="page_img" id="image">
+            <div id="img" style="flex: none; height: 100%; width: 100%; background-color: rgb(37, 37, 37); overflow:hidden; object-fit: cover; ">
+  <!-- carousel -->
+  <div id="hero-carousel" class="carousel slide carousel-fade"  data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active c-item">
+        <img src="https://images.unsplash.com/photo-1579033461380-adb47c3eb938?fit=crop&w=1964&q=100" class="d-block w-100 c-img z" alt="Slide 1">
+      </div>
+      <div class="carousel-item c-item">
+        <img src="https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?fit=crop&w=2134&q=100" class="d-block w-100 c-img z" alt="Slide 2">
+      </div>
+      <div class="carousel-item c-item">
+        <img src="https://images.unsplash.com/photo-1612686635542-2244ed9f8ddc?fit=crop&w=2070&q=100" class="d-block w-100 c-img z" alt="Slide 3">
+      </div>
+    </div>
+  </div>
+  <!-- carousel -->
+            </div>
+        </div>
         </div>  <!--  -->
         </container>
         <!-- ssssssssssssssssssssss -->
@@ -136,9 +160,9 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
             </div>
         <!-- ssssssssssssssssssssss -->
         <container class="stuffs">
-        <div class="stuff" onclick="openOverlay()" style=" border-top: solid 1px #dfdfdf;"><p>Product Details</p> <svg class="margin_r" focusable="false" viewBox="0 0 24 24" width="24" height="24" class="pip-svg-icon" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="m20.0008 12.0001-8-8.001-1.4143 1.414L16.1727 11H4v2h12.1723l-5.5868 5.5866 1.4141 1.4142 8.0012-8.0007z"></path></svg></div>
-        <div class="stuff"><p>Material Information</p> <svg class="margin_r" focusable="false" viewBox="0 0 24 24" width="24" height="24" class="pip-svg-icon" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="m20.0008 12.0001-8-8.001-1.4143 1.414L16.1727 11H4v2h12.1723l-5.5868 5.5866 1.4141 1.4142 8.0012-8.0007z"></path></svg></div>
-        <div class="stuff"><p>Reviews</p> <div class="button" style="margin-right: 10px; box-shadow: none; background-color: rgb(43, 43, 43); color: whitesmoke; min-width: 110px !important; height: 40px;" onclick="openReview()">Add a Review</div></div>
+        <div class="stuff" onclick="openOverlay()" style=" border-top: solid 1px #dfdfdf; "><p style="margin-top: 0; margin-bottom: 0;">Product Details</p> <svg class="margin_r" focusable="false" viewBox="0 0 24 24" width="24" height="24" class="pip-svg-icon" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="m20.0008 12.0001-8-8.001-1.4143 1.414L16.1727 11H4v2h12.1723l-5.5868 5.5866 1.4141 1.4142 8.0012-8.0007z"></path></svg></div>
+        <div class="stuff"><p style="margin-top: 0; margin-bottom: 0;">Material Information</p> <svg class="margin_r" focusable="false" viewBox="0 0 24 24" width="24" height="24" class="pip-svg-icon" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="m20.0008 12.0001-8-8.001-1.4143 1.414L16.1727 11H4v2h12.1723l-5.5868 5.5866 1.4141 1.4142 8.0012-8.0007z"></path></svg></div>
+        <div class="stuff"><p style="margin-top: 0; margin-bottom: 0;">Reviews</p> <div class=" buttonrev button"  onclick="openReview()">Add a Review</div></div>
         </container>
         
 </container>
@@ -146,17 +170,17 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
 <div class="page_img infoCont pcInfo">
     <container>
     <container style="display: flex; flex-direction: column; ">
-        <p style="color: #1c1c1c; font-size: 2rem; margin-bottom: 0; font-weight: 400; margin-top: 20px !important; ">Nike Dunk Low Retro</p>
-    <p style="color: #1c1c1c; font-size: 1.3rem;">Men's Shoes</p>
-    <p style="color: #1c1c1c; font-size: 1.3rem;">$125</p>
-    <p style="color: #1c1c1c; font-size: 1.3rem;">Color: Grey</p>
+        <p class="margin-zero" style="color: #1c1c1c; font-size: 2rem; margin-bottom: 0; font-weight: 400; margin-top: 20px !important; ">Nike Dunk Low Retro</p>
+        <p class="margin-zero" style="color: #1c1c1c; font-size: 1.3rem;">Men's Shoes</p>
+        <p class="margin-zero" style="color: #1c1c1c; font-size: 1.3rem;">$125</p>
+        <p class="margin-zero" style="color: #1c1c1c; font-size: 1.3rem;">Color: Grey</p>
 
     <container id="colorSelect" style="display: grid; width: min-content;">
         <div></div><div></div><div></div><div></div><div></div>
         <div></div><div></div><div></div><div></div>
         </container>
 
-    <p style="color: #1c1c1c; font-size: 1.3rem;">Select Size</p>
+    <p class="margin-zero" style="color: #1c1c1c; font-size: 1.3rem;">Select Size</p>
     <container id="sizeSelect" style=" display: grid; width: min-content;">
     <div>XS</div><div>S</div><div>M</div><div>L</div><div>XL</div>
     <div>XXL</div><div>XXXL</div><div>XXXXL</div><div>XXXXXL</div>
@@ -270,7 +294,7 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
 <!-- you may also like  8 items-->
 
 <div id="includedFooter"></div>
-<div class="bottomSheet" style="display: none; height: 80vh; position: fixed; bottom: 0; z-index: 12; width: 100vw; background-color: rgb(255, 255, 255); border-radius: 10px 10px 0px 0px; "> <div style="color: #1c1c1c; font-size: 2rem; margin-top: 15px; margin-left: 10px;">Product Details</div>  </div>
+<div class="bottomSheet" > <div style="color: #1c1c1c; font-size: 2rem; margin-top: 15px; margin-left: 10px;">Product Details</div>  </div>
 <div class="bottomSheetShadow" onclick="closeOverlay()" style="display: none; height: 100vh; position: fixed; bottom: 0; z-index: 11; width: 100vw; background-color: rgba(0, 0, 0, 0.562);"></div>
 <script>
 $(document).ready(function() {
@@ -304,7 +328,7 @@ $('.rating')
   </script>
 <div class="shadowOverlay" style="height: 100vh; width: 100vw; z-index:19;  position: fixed; top: 0; display: flex; justify-content: center; align-items: center;" >
    <div class="SO" style="height: 100vh; width: 100vw; background-color:rgba(0, 0, 0, 0.459); position: fixed; top: 0; " onclick="closeReview()"></div>
-        <div style="font-size: 1rem; height:200px; width: 75%; position: fixed; border-radius: 10px; background-color: rgba(255, 255, 255, 0.623); backdrop-filter: blur(12px); color: #0e0e0ec7; display: flex; justify-content: center; flex-direction: column; align-items: center; gap: 20px;">
+        <div style="font-size: 1rem; height:200px; max-width: 400px; width: 75%;  position: fixed; border-radius: 10px; background-color: rgba(255, 255, 255, 0.623); backdrop-filter: blur(12px); color: #0e0e0ec7; display: flex; justify-content: center; flex-direction: column; align-items: center; gap: 20px;">
             <div class="rating"></div>
 
         </div>

@@ -1,6 +1,10 @@
 /* PHONE */
-@media (max-width: 480px) { 
- 
+@media (max-width: 960px) { 
+    .c-item {
+        height: 350px !important ;
+        width:100%;
+      }
+
     .bottomSheetShadow{
 display: none;
 height: 100vh !important;
@@ -31,6 +35,9 @@ transition: 0.4s;
      
  .midMan{
     margin-top: 55px !important;
+ }
+ #img{
+    border-radius:0 !important;
  }
     #image{
         border-radius: 0px 0px 10px 10px !important;
@@ -77,6 +84,7 @@ width: 100% !important;
         display: none !important;
     }
     .stuffs{
+
     }
     .midMan{
         width: 100%;
@@ -160,8 +168,10 @@ display: none !important;
         border-radius: 0 !important;
         background-color: whitesmoke;
         height: 100%;
+        background-size: 30px !important;
         width: 15% !important;
     }
+
     .stuff{
         width: 100% !important;
     }
@@ -174,26 +184,138 @@ display: block !important;
 
 }
 /* TABLET */
-@media (min-width:481px) and (max-width: 1200px)  {
+@media (min-width:481px) and (max-width: 960px)  {
+    #image{
+        height: 73vw !important;
+    }
+    .c-item{
+        height: 73vw !important;
+
+    }
+}
+@media (min-width:961px) and (max-width: 1200px)  {
+ 
     .mobileInfo{
         display: none !important;;
     }
+    .stuffs{
+        display: block !important;
+        margin-top: 15px !important;
+    }
+    .stuff{
+        height: 81px !important;
+        /* 86 */
+    }
+.buttonrev{
+    width: 140px !important;
 }
-   
+.margin-zero{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.bottomSheet{
+right: 0 !important;
+    overflow: hidden;
+    width: 0vw !important;
+    height: 100vh !important;
+}    
+.bottomSheet.open{
+    width: 60vw !important;
+    height: 100vh !important;
+}
+.bottomSheetShadow{
+    display: none;
+    height: 100vh !important;
+    opacity: 0;
+    transition: 0.4s;
+        }
+    
+        .bottomSheetShadow.open{
+            opacity: 100 !important;
+        }
+        .bottomSheetShadow.begin{
+            display: block !important;
+        }
+        .c-item {
+            height: 600px  !important;
+            width: 500px;
+          }
+       .bigman{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+       }
+     #thumbnails{
+        width: 70px !important;
+     }
+     #thumbnails div{
+        width: 50px !important;
+        height: 50px !important;
+     }
+     .stuff{
+        width: auto !important;
+     }
+     .infoCont{
+        margin-left: 50px !important;
+        width: 375px !important;
+     }
+     #image{
+        width: 460px !important;
+     }
+}  
 /* LAPTOP */
-@media (min-width:1201px) and (max-width: 1600px) { 
-    .mobileInfo{
-        display: none !important;
-    }
-}
+
 /* PC */
-@media (min-width:1601px){ 
+@media (min-width:1201px){ 
     .mobileInfo{
         display: none !important;;
     }
+    .stuffs{
+        display: block !important;
+        margin-top: 15px !important;
+    }
+    .stuff{
+        height: 81px !important;
+        /* 86 */
+    }
+.buttonrev{
+    width: 140px !important;
+}
+.margin-zero{
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
+.bottomSheet{
+right: 0 !important;
+    overflow: hidden;
+    width: 0vw !important;
+    height: 100vh !important;
+}    
+.bottomSheet.open{
+    width: 60vw !important;
+    height: 100vh !important;
+}
+.bottomSheetShadow{
+    display: none;
+    height: 100vh !important;
+    opacity: 0;
+    transition: 0.4s;
+        }
+    
+        .bottomSheetShadow.open{
+            opacity: 100 !important;
+        }
+        .bottomSheetShadow.begin{
+            display: block !important;
+        }
+        .c-item {
+            height: 600px  !important;
+            width: 500px;
+          }
+}
 
+/*  */
   .shadowOverlay{
     display: none !important;
     opacity: 0;
@@ -207,11 +329,29 @@ display: block !important;
             display: flex !important;
  }
   .bottomSheet{
+    display: none;
+     height: 80vh;
+      position: fixed;
+       bottom: 0;
+        z-index: 12;
+         width: 100vw;
+          background-color: rgb(255, 255, 255);
+           border-radius: 10px 10px 0px 0px;
             display: flex !important;
-            height: 0 !important;
+            height: 0vh ;
+            /* comeback */
             transition: 0.4s;
         }
   .bottomSheet.open{
-            height: 80vh !important;
+            height: 80vh ;
     
         }
+   
+        .c-img {
+            border-radius: 0px 0px 0px 0px !important;
+            height: 100%;
+            object-fit: contain;
+          }
+          #img{
+            border-radius: 10px;
+          }

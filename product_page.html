@@ -16,6 +16,9 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 <script>
+   $(function(){
+      $("#includedFooter").load("footer.html"); 
+    });
  document.addEventListener("DOMContentLoaded", function() {
 
     var div = document.querySelector(".product_item");
@@ -73,6 +76,25 @@ filterBar.classList.remove('scrollup');}
                 <p id="info_sub">Men's shoes</p>
                 <p id="info_sub"> 5 colors</p>`
 }
+function openFilter(num){
+var sheet=document.querySelector('.filterSheet');
+setTimeout(function() { sheet.classList.add('begin'); }, 10);
+setTimeout(function() {sheet.classList.add('open'); }, 20);
+var shadow=document.querySelector('.filterSheetShadow');
+setTimeout(function() { shadow.classList.add('begin'); }, 10);
+setTimeout(function() {shadow.classList.add('open'); }, 20);
+    }
+    function closeOverlay(){
+var sheet=document.querySelector('.filterSheet');
+setTimeout(function() {sheet.classList.remove('open'); }, 10);
+setTimeout(function() {sheet.classList.remove('begin'); }, 300);
+
+
+var shadow=document.querySelector('.filterSheetShadow');
+
+setTimeout(function() {shadow.classList.remove('open'); }, 10);
+setTimeout(function() { shadow.classList.remove('begin'); }, 400);
+    }
 </script>
 <body>
     <div class="menu scrolls subpage" id="header" onmouseenter="closeM()" >
@@ -104,72 +126,91 @@ filterBar.classList.remove('scrollup');}
         </container>
       </div>
     </div>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1>ssssssssssss</h1>
-<h1>ssssssssssss</h1>
+    
+<ul class="address marginleft">
+      <li>Home</li>
+      <li class="gap"> </li>
+      <li>All Items</li>
+    </ul>
+<h1 class="marginleft"  style="margin-top: 20px; margin-bottom: 20px !important; color: #3b3b3b;">All Items</h1>
 
     <div class="filterBar">
-        <i class="fa fa-filter"   style="font-size:24px; color: #3b3b3b;"></i>
+      <!--phone/tablet  -->
+      <div class="btn-group filter-button" onclick="openFilter()">
+        <button style="height: 30px;  overflow: hidden !important;
+        width: 90px; color: #000; font-size: 1.1rem; " type="button" class="btn btn-outline-secondary  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Filters
+        </button>
+     
+      </div>
+<!--phone/tablet    -->
+      <div class="bigDevices-filter">
+        <i class="fa fa-filter marginleft" style=" margin-top: 10px; margin-right: 10px !important; font-size:24px; color: #3b3b3b;"></i>
 
         <div class="btn-group">
             <button style="height: 30px;  overflow: hidden !important;
             width: 90px; color: #000; font-size: 1.1rem; " type="button" class="btn btn-outline-secondary  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Action
+              Price
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+       <form>
+            <input type="radio" id="25" name="price" value="25">
+            <label for="25">$0 - $25</label><br>
+            <input type="radio" id="50" name="price" value="50">
+            <label for="50">$25 - $50</label><br>
+            <input type="radio" id="100" name="price" value="100">
+            <label for="100">$50 - $100</label><br>
+            <input type="radio" id="100000" name="price" value="100000">
+            <label for="100000">>$100</label>
+          </form>          
             </ul>
           </div>
           <div class="btn-group">
             <button style="height: 30px; width: 90px; color: #000; font-size: 1.1rem; " type="button" class="btn btn-outline-secondary  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Action
+              Size
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <container class="product_pageSize" id="sizeSelect" style=" display: grid; width: min-content;">
+                <div>XS</div><div>S</div><div>M</div><div>L</div><div>XL</div>
+                <div>XXL</div><div>XXXL</div><div>XXXXL</div><div>XXXXXL</div>
+                   
+              </container> 
             </ul>
           </div>
           <div class="btn-group">
             <button style="height: 30px; width: 90px; color: #000; font-size: 1.1rem; " type="button" class="btn btn-outline-secondary  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Action
+              Color
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <container class="product_pagecolor" id="colorSelect">
+                <div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div>
+                </container>
             </ul>
           </div>
-          <div class="btn-group">
-            <button style="height: 30px; width: 90px; color: #000; font-size: 1.1rem; " type="button" class="btn btn-outline-secondary  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Action
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
-            </ul>
-          </div>
-          <div class="btn-group">
-            <button style="height: 30px; width: 90px; color: #000; font-size: 1.1rem; " type="button" class="btn btn-outline-secondary  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Action
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
-            </ul>
-          </div>
+      
+         
     </div>
+    
+    <!-- sort -->
+    <div class="btn-group sort">
+      <button style="height: 30px;  overflow: hidden !important;
+      width: 90px; color: #000; font-size: 1.1rem; " type="button" class="btn btn-outline-secondary  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        Sort by
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Price High To Low</a></li>
+        <li><a class="dropdown-item" href="#">Price Low To High</a></li>
+        <li><a class="dropdown-item" href="#">Newest</a></li>
+        <li><a class="dropdown-item" href="#">Top Seller</a></li>
+      </ul>
+    </div>
+    <!-- sort -->
+
+
+  </div>
+</div>
+
     <div class="bigman" >
     <div class="productGrid">
       <a href="item_page.html"> <div class="product_item" onmouseenter="toggleThumbnail('0') " onmouseleave="byeThumbnail('0')">
@@ -209,10 +250,93 @@ filterBar.classList.remove('scrollup');}
             <div  class="thumbnail">  </div>
             <div  class="thumbnail"></div> -->
         </div>
-        
         <div class="product_img"></div> 
     </div>
-       
 </div>
+    </div>
+    <div id="includedFooter"></div>
+    <div class="filterSheet" > <div style="color: #1c1c1c; font-size: 2.2rem; margin-top: 30px; margin-left: 10px;">Filters
+    
+       <!-- accord -->
+       <hr style="width:100%;text-align:left;margin:0; margin-top: 10px; margin-bottom: 10px;">
+
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Price
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body"> 
+         <div class="items_accordion">
+          <form>
+            <input type="radio" id="25" name="price" value="25">
+            <label for="25">$0 - $25</label><br>
+            <input type="radio" id="50" name="price" value="50">
+            <label for="50">$25 - $50</label><br>
+            <input type="radio" id="100" name="price" value="100">
+            <label for="100">$50 - $100</label><br>
+            <input type="radio" id="100000" name="price" value="100000">
+            <label for="100000">>$100</label>
+          </form>          
+            </div>
+      </div>
+    </div>
+    <hr style="width:100%;text-align:left;margin:0; margin-top: 10px; margin-bottom: 10px;">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          Size
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">       <div class="items_accordion">
+          <container id="sizeSelect" style=" display: grid; width: min-content;">
+            <div>XS</div><div>S</div><div>M</div><div>L</div><div>XL</div>
+            <div>XXL</div><div>XXXL</div><div>XXXXL</div><div>XXXXXL</div>
+                </div></div>
+                </container>    
+                
+      </div>
+    </div>
+    <hr style="width:100%;text-align:left;margin:0; margin-top: 10px; margin-bottom: 10px;">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          Color
+        </button>
+      </h2>
+      
+      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">       <div class="items_accordion">
+
+
+          <container class="product_pagecolor" id="colorSelect">
+            <div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+            </container>
+        
+               </div> </div>
+               
+
+      </div>
+    </div>
+    <hr style="width:100%;text-align:left;margin:0; margin-top: 10px; margin-bottom: 10px;">
+
+<div style="display: flex; justify-content: center; align-items: center; width: 100%; position: absolute; bottom: 40px; margin-left: -10px; ">
+    <div class="button" id="filter_apply_button">Apply Filters</div>
+  </div>
+  </div>
+
+</div>
+
+    <!-- accord -->
+    </div>  </div>
+    <div class="filterSheetShadow" onclick="closeOverlay()" style="display: none; height: 100vh; position: fixed; bottom: 0; z-index: 11; width: 100vw; background-color: rgba(0, 0, 0, 0.562);"></div>
+
 </body>
+
 </html>
