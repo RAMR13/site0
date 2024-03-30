@@ -87,41 +87,69 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
     <container class="midMan" style="margin-top: 75px;">
         <container>
             <div style="display: flex;" id="image_and_thumbs"> <!--  -->
-                
+                <!-- will be a function -->
             <div class="page_img" id="thumbnails" >  
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div style="background-image: url(./assets/img/img1.webp); background-size: cover;" onclick="changeImage(1)"></div>
+            <div style="background-image: url(./assets/img/img2.webp); background-size: cover;" onclick="changeImage(2)"></div>
+            <div style="background-image: url(./assets/img/img3.webp); background-size: cover;" onclick="changeImage(3)"></div>
+            <div style="background-image: url(./assets/img/img4.webp); background-size: cover;" onclick="changeImage(4)"></div>
+            <div style="background-image: url(./assets/img/img5.webp); background-size: cover;" onclick="changeImage(5)"></div>
+            <div style="background-image: url(./assets/img/img6.webp); background-size: cover;" onclick="changeImage(6)"></div>
+            <div style="background-image: url(./assets/img/img6.webp); background-size: cover;" onclick="changeImage(6)"></div>
+            <div style="background-image: url(./assets/img/img6.webp); background-size: cover;" onclick="changeImage(6)"></div>
+            <div style="background-image: url(./assets/img/img6.webp); background-size: cover;" onclick="changeImage(6)"></div>
+            <div style="background-image: url(./assets/img/img6.webp); background-size: cover;" onclick="changeImage(6)"></div>
+                <!-- will be a function -->
+
         </div>
         <div class="page_img" id="image">
-            <div id="img" style="flex: none; height: 100%; width: 100%; background-color: rgb(37, 37, 37); overflow:hidden; object-fit: cover; ">
+            <div id="img" style="flex: none; height: 100%; width: 100%; background-color: rgb(231, 231, 231) !important; overflow:hidden; object-fit: contain; ">
   <!-- carousel -->
-  <div id="hero-carousel" class="carousel slide carousel-fade"  data-bs-ride="carousel">
+
+  <div id="hero-carousel" class="carousel slide carousel"  data-interval="false">
     <div class="carousel-indicators">
+        <!-- will turn into a function -->
       <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+
     </div>
+    
     <div class="carousel-inner">
       <div class="carousel-item active c-item">
-        <img src="https://images.unsplash.com/photo-1579033461380-adb47c3eb938?fit=crop&w=1964&q=100" class="d-block w-100 c-img z" alt="Slide 1">
+        <img src="./assets/img/img1.webp" class="d-block w-100 c-img z" alt="Slide 1">
       </div>
       <div class="carousel-item c-item">
-        <img src="https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?fit=crop&w=2134&q=100" class="d-block w-100 c-img z" alt="Slide 2">
+        <img src="./assets/img/img2.webp" class="d-block w-100 c-img z" alt="Slide 2">
       </div>
       <div class="carousel-item c-item">
-        <img src="https://images.unsplash.com/photo-1612686635542-2244ed9f8ddc?fit=crop&w=2070&q=100" class="d-block w-100 c-img z" alt="Slide 3">
+        <img src="./assets/img/img3.webp" class="d-block w-100 c-img z" alt="Slide 3">
       </div>
-    </div>
+      <div class="carousel-item c-item">
+        <img src="./assets/img/img3.webp" class="d-block w-100 c-img z" alt="Slide 4">
+      </div>
+
+        <div class="carousel-item c-item">
+            <img src="./assets/img/img4.webp" class="d-block w-100 c-img z" alt="Slide 6">
+        </div>
+            <div class="carousel-item c-item">
+                <img src="./assets/img/img5.webp" class="d-block w-100 c-img z" alt="Slide 7">
+            </div>
+            </div>
+    
+            <!-- will turn into a function -->
+
+    <button class="carousel-control-prev " type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next " type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
   </div>
   <!-- carousel -->
             </div>
@@ -204,6 +232,7 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
 <div class="mayLikeCont" style="display: flex; gap: 12px !important;  overflow-x: scroll;  margin-bottom: 20px;"> 
   <div class="product_item" onmouseenter="toggleThumbnail('0') " onmouseleave="byeThumbnail('0')">
         <div class="info_price">$139.99</div>
+
         <div class="info" id="info0">
             <p>Adios running shoes</p>
             <p id="info_sub">Men's shoes</p>
@@ -294,11 +323,25 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
 <!-- you may also like  8 items-->
 
 <div id="includedFooter"></div>
-<div class="bottomSheet" > <div style="color: #1c1c1c; font-size: 2rem; margin-top: 15px; margin-left: 10px;">Product Details</div>  </div>
+<div class="bottomSheet" > <div style="color: #1c1c1c; font-size: 2rem; margin-top: 25px; margin-left: 15px; ">Product Details</div> 
+<ul style="color: #1c1c1c; font-size: 1.4rem; margin-left: 10px; margin-top: 15px; padding-right: 50px; overflow-y: scroll;">
+    <li>We've designed the Supernova Rise to deliver maximum comfort in every stride. Our Dreamstrike+ technology cushions the midsole with ​re-engineered super foam. What makes it so super, you ask? It offers the ideal balance of comfort and support to keep you comfy mile after mile. Additionally you will get a system of denser foam Support Rods which means in the real world worry-free transition from heel to toe. Finally, our Comfort Heel Fit combines cushy foam and soft textile for a more secure fit so that it feels like the shoe is giving your heel a hug.</li>
+    <li style="margin-top: 20px;">We've designed the Supernova Rise to deliver maximum comfort in every stride. Our Dreamstrike+ technology cushions the midsole with ​re-engineered super foam. What makes it so super, you ask? It offers the ideal balance of comfort and support to keep you comfy mile after mile. Additionally you will get a system of denser foam Support Rods which means in the real world worry-free transition from heel to toe. Finally, our Comfort Heel Fit combines cushy foam and soft textile for a more secure fit so that it feels like the shoe is giving your heel a hug.</li>
+    <li style="margin-top: 20px;">We've designed the Supernova Rise to deliver maximum comfort in every stride. Our Dreamstrike+ technology cushions the midsole with ​re-engineered super foam. What makes it so super, you ask? It offers the ideal balance of comfort and support to keep you comfy mile after mile. Additionally you will get a system of denser foam Support Rods which means in the real world worry-free transition from heel to toe. Finally, our Comfort Heel Fit combines cushy foam and soft textile for a more secure fit so that it feels like the shoe is giving your heel a hug.</li>
+
+    </ul>
+ </div>
+
 <div class="bottomSheetShadow" onclick="closeOverlay()" style="display: none; height: 100vh; position: fixed; bottom: 0; z-index: 11; width: 100vw; background-color: rgba(0, 0, 0, 0.562);"></div>
 <script>
-$(document).ready(function() {
+function changeImage(i){
+  var img=  document.querySelector('#img');
+  img.style.backgroundImage = "url('./assets/img/img" + i + ".webp'";
 
+//   "url('./assets/img/img" + i + ")";
+}
+$(document).ready(function() {
+ 
   $('.rating').starRating({
     starIconEmpty:'fa fa-star',
     starIconFull:'fa fa-star',
@@ -328,9 +371,9 @@ $('.rating')
   </script>
 <div class="shadowOverlay" style="height: 100vh; width: 100vw; z-index:19;  position: fixed; top: 0; display: flex; justify-content: center; align-items: center;" >
    <div class="SO" style="height: 100vh; width: 100vw; background-color:rgba(0, 0, 0, 0.459); position: fixed; top: 0; " onclick="closeReview()"></div>
-        <div style="font-size: 1rem; height:200px; max-width: 400px; width: 75%;  position: fixed; border-radius: 10px; background-color: rgba(255, 255, 255, 0.623); backdrop-filter: blur(12px); color: #0e0e0ec7; display: flex; justify-content: center; flex-direction: column; align-items: center; gap: 20px;">
+        <div style="font-size: 1rem; height:200px; max-width: 400px; width: 75%;  position: fixed; border-radius: 10px; background-color: rgba(255, 255, 255, 0.712); backdrop-filter: blur(12px); color: #0e0e0ec7; display: flex; justify-content: center; flex-direction: column; align-items: center; gap: 20px;">
             <div class="rating"></div>
-
+<div class="buttonrev button" style="margin: 0 !important; padding: 0 !important; ">Review</div>
         </div>
 
 

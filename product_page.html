@@ -65,8 +65,8 @@ filterBar.classList.remove('scrollup');}
 
                     <div  class="thumbnail" id="last">+2</div>`
     info.classList.add("thumbnail");
-    }}, 150)
-    setTimeout(function() {info.classList.remove("fadeout")}, 301)
+    }}, 100)
+    setTimeout(function() {info.classList.remove("fadeout")}, 100)
     }
     function byeThumbnail(index){
     var info=  document.querySelector('#info'+index);
@@ -149,11 +149,11 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
 
         <div class="btn-group">
             <button style="height: 30px;  overflow: hidden !important;
-            width: 90px; color: #000; font-size: 1.1rem; " type="button" class="btn btn-outline-secondary  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            width: 90px; color: #000; font-size: 1.3rem; " type="button" class="btn btn-outline-secondary  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               Price
             </button>
-            <ul class="dropdown-menu">
-       <form>
+            <ul class="dropdown-menu ">
+       <form class="priceform" style="font-size: 1.1rem !important;">
             <input type="radio" id="25" name="price" value="25">
             <label for="25">$0 - $25</label><br>
             <input type="radio" id="50" name="price" value="50">
@@ -215,10 +215,14 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
     <div class="productGrid">
       <a href="item_page.html"> <div class="product_item" onmouseenter="toggleThumbnail('0') " onmouseleave="byeThumbnail('0')">
             <div class="info_price">$139.99</div>
+            <div class="cirlce_product" id="fav"></div>
+
             <div class="info" id="info0">
                 <p>Adios running shoes</p>
                 <p id="info_sub">Men's shoes</p>
                 <p id="info_sub"> 5 colors</p>
+
+
                 <!-- <div class="thumbnail"></div>
                 <div  class="thumbnail">  </div>
                 <div  class="thumbnail"></div> -->
@@ -228,7 +232,9 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
         </div>
       </a> 
         <div class="product_item"  onmouseenter="toggleThumbnail('1') " onmouseleave="byeThumbnail('1')">
-          <div class="info_price">$13s.99</div>
+          <div class="info_price">$140.99</div>
+          <div class="cirlce_product" id="fav"></div>
+
           <div class="info" id="info1" >
               <p>Adios running shoes</p>
               <p id="info_sub">Men's shoes</p>
@@ -241,7 +247,9 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
           <div class="product_img"></div> 
       </div>
       <div class="product_item"  onmouseenter="toggleThumbnail('2') " onmouseleave="byeThumbnail('2')">
-        <div class="info_price">$13s.99</div>
+        <div class="info_price">$13.99</div>
+        <div class="cirlce_product" id="fav"></div>
+
         <div class="info" id="info2" >
             <p>Adios running shoes</p>
             <p id="info_sub">Men's shoes</p>
@@ -260,17 +268,17 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
        <!-- accord -->
        <hr style="width:100%;text-align:left;margin:0; margin-top: 10px; margin-bottom: 10px;">
 
-  <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion accordion-flush" id="accordionFlushFilter">
     <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingOne">
-        <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+      <h2 class="accordion-header" id="flush-headingFilter">
+        <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOneFilter" aria-expanded="false" aria-controls="flush-collapseOneFilter">
         Price
         </button>
       </h2>
-      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div id="flush-collapseOneFilter" class="accordion-collapse collapse" aria-labelledby="flush-headingOneFilter" data-bs-parent="#accordionFlushFilter">
         <div class="accordion-body"> 
          <div class="items_accordion">
-          <form>
+          <form class="priceform">
             <input type="radio" id="25" name="price" value="25">
             <label for="25">$0 - $25</label><br>
             <input type="radio" id="50" name="price" value="50">
@@ -286,12 +294,12 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
     <hr style="width:100%;text-align:left;margin:0; margin-top: 10px; margin-bottom: 10px;">
 
     <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+      <h2 class="accordion-header" id="flush-headingTwoFilter">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwoFilter" aria-expanded="false" aria-controls="flush-collapseTwoFilter">
           Size
         </button>
       </h2>
-      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div id="flush-collapseTwoFilter" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushFilter">
         <div class="accordion-body">       <div class="items_accordion">
           <container id="sizeSelect" style=" display: grid; width: min-content;">
             <div>XS</div><div>S</div><div>M</div><div>L</div><div>XL</div>
@@ -304,13 +312,13 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
     <hr style="width:100%;text-align:left;margin:0; margin-top: 10px; margin-bottom: 10px;">
 
     <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+      <h2 class="accordion-header" id="flush-headingThreeFilter">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreeFilter" aria-expanded="false" aria-controls="flush-collapseThreeFilter">
           Color
         </button>
       </h2>
       
-      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div id="flush-collapseThreeFilter" class="accordion-collapse collapse" aria-labelledby="flush-headingThreeFilter" data-bs-parent="#accordionFlushFilter">
         <div class="accordion-body">       <div class="items_accordion">
 
 

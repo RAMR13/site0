@@ -64,7 +64,7 @@
 
                 if (settings.showInfo) {
                     $('<strong>', {
-                        html: "0",
+                        html: `<i class="fa-solid fa-meh-blank" style="font-size:46px; height: 46px; width: 46px; color:#3C3C3C !important;"></i>`,
                         class: 'js-wc-rating-value',
                         css: {
                             fontSize: "5em"

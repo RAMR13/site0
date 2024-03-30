@@ -211,14 +211,15 @@ background-image:linear-gradient( rgba(0, 0, 0, 0.452), rgba(0, 0, 0, 0.26) ), u
     top: 0;
     margin-top: 0px;
     backdrop-filter:blur( 20px);
-    background-color: rgba(22, 22, 23, 0.644)
+    background-color: rgba(22, 22, 23, 0.801)
 }
 #slider.scrolls{
     top: 58px;
     margin-top: 0px;
 }
 #scrollable_container.scrolls{
-    background-color: #1c1c1c !important;
+    background-color: #1f1f1f !important;
+    backdrop-filter: blur(8px);
 }
 
 #header.edge{
@@ -298,12 +299,13 @@ font-weight: bold;
     
 }
 #more{
-    background-image: url("./assets/menu.png");
+    background-image: url("./assets/search b.png");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
 }
 .button{
+    transition: 0.3s;
     box-shadow: rgba(0, 0, 0, 0.507) 0px 5px 15px -2px;
     font-size: 1.2rem;
     display: flex;
@@ -547,6 +549,7 @@ font-size: 1.4rem;
 font-weight: 600;
 margin-bottom: 5px;
 }
+
 #footer{
     padding-top:20px ;    
     padding-bottom:20px ;
@@ -622,6 +625,7 @@ width: 30px;
     padding-left: 30px;
     padding-right: 30px;
 }
+
 .cirlce_product{
     width: 40px;
     height: 40px;
@@ -788,6 +792,7 @@ gap: 18px;
     align-items: center;
 }
 .cats{
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 75px;
     gap: 10px;
 }
@@ -796,6 +801,7 @@ gap: 18px;
     gap: 2px;
 }
 #catM{
+
     align-items: start;
 }
   }
@@ -826,7 +832,6 @@ gap: 18px;
     }
     .cats{
         margin-top: 75px;
-
         gap: 10px;
     }
     .cats div{
@@ -1106,9 +1111,9 @@ background-color: transparent;
      
      */
      .scrollable-tabs-container {
-        max-width: 700px;
+        justify-content: center;
+    display: flex;
         margin: 16px auto;
-        border-radius: 4px;
         overflow: hidden;
         position: relative;
         transition: 0.6s;
@@ -1149,7 +1154,7 @@ background-color: transparent;
       }
       
       .scrollable-tabs-container a {
-        color: rgb(44, 44, 44);
+        color: rgba(44, 44, 44, 0.877);
         font-weight: 600;
         text-decoration: none;
         background: whitesmoke;
@@ -1162,7 +1167,6 @@ background-color: transparent;
       
       .scrollable-tabs-container a.active {
         background: #fff;
-        color: #eb1c1c;
       }
       .scrollable-tabs-container .right-arrow,
       .scrollable-tabs-container .left-arrow {

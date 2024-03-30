@@ -16,10 +16,10 @@ transition: 0.4s;
         opacity: 100 !important;
     }
     .bottomSheetShadow.begin{
-        display: block !important;
+        display: flex !important;
     }
     .bottomSheet{
-        display: block !important;
+        display: flex !important;
         height: 0 !important;
         transition: 0.4s;
     }
@@ -164,6 +164,9 @@ border-radius: 0 !important;
     #thumbnails{
 display: none !important;
     }
+    #img{
+        background-color: whitesmoke !important;
+    }
     #heart{
         border-radius: 0 !important;
         background-color: whitesmoke;
@@ -181,10 +184,16 @@ display: none !important;
     .mobileInfo{
 display: block !important;
     }
+    .c-img{
+        object-fit: contain !important;
+      }
 
 }
 /* TABLET */
 @media (min-width:481px) and (max-width: 960px)  {
+    #img{
+        background-color: whitesmoke !important;
+    }
     #image{
         height: 73vw !important;
     }
@@ -192,9 +201,18 @@ display: block !important;
         height: 73vw !important;
 
     }
+    .c-img{
+        object-fit: contain !important;
+      }
 }
 @media (min-width:961px) and (max-width: 1200px)  {
- 
+    #img{
+       background-image: url(./assets/img/img1.webp) ;
+       object-fit: contain !important;
+       background-size: contain;
+       background-repeat: no-repeat;
+       background-position: center !important;
+    }
     .mobileInfo{
         display: none !important;;
     }
@@ -235,7 +253,7 @@ right: 0 !important;
             opacity: 100 !important;
         }
         .bottomSheetShadow.begin{
-            display: block !important;
+            display: flex !important;
         }
         .c-item {
             height: 600px  !important;
@@ -248,6 +266,9 @@ right: 0 !important;
      #thumbnails{
         width: 70px !important;
      }
+     .carousel{
+        display: none !important;
+    }
      #thumbnails div{
         width: 50px !important;
         height: 50px !important;
@@ -260,13 +281,30 @@ right: 0 !important;
         width: 375px !important;
      }
      #image{
+        background-image:none !important;
         width: 460px !important;
      }
+     .c-img{
+        object-fit: contain !important;
+      }
 }  
 /* LAPTOP */
 
 /* PC */
 @media (min-width:1201px){ 
+    #image{
+        background-image:none !important;
+    }
+    #img{
+        background-image: url(./assets/img/img1.webp) ;
+        object-fit: contain !important;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center !important;
+     }
+    .carousel{
+        display: none !important;
+    }
     .mobileInfo{
         display: none !important;;
     }
@@ -287,13 +325,15 @@ right: 0 !important;
 }
 
 .bottomSheet{
+
 right: 0 !important;
     overflow: hidden;
     width: 0vw !important;
     height: 100vh !important;
 }    
 .bottomSheet.open{
-    width: 60vw !important;
+    border-radius: 10px 0px 0px 10px !important;
+    width: 50vw !important;
     height: 100vh !important;
 }
 .bottomSheetShadow{
@@ -307,11 +347,14 @@ right: 0 !important;
             opacity: 100 !important;
         }
         .bottomSheetShadow.begin{
-            display: block !important;
+            display: flex !important;
         }
         .c-item {
             height: 600px  !important;
             width: 500px;
+          }
+          .c-img{
+            object-fit: contain !important;
           }
 }
 
@@ -329,6 +372,7 @@ right: 0 !important;
             display: flex !important;
  }
   .bottomSheet{
+    flex-direction: column !important;
     display: none;
      height: 80vh;
       position: fixed;
@@ -355,3 +399,4 @@ right: 0 !important;
           #img{
             border-radius: 10px;
           }
+  
