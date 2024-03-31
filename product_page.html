@@ -25,17 +25,15 @@
     var parentDiv = document.querySelector(".productGrid");
 
     for (var i = 0; i < 12; i++) {
-        var clonedDiv = div.cloneNode(true); // Clone the div
+        var clonedDiv = div.cloneNode(true);
         parentDiv.appendChild(clonedDiv);
     }
     parentDiv.addEventListener("mouseenter", function(event) {
-        // Check if the mouse entered an element with the class "product_item"
         if (event.target.classList.contains("product_item")) {
             toggleThumbnail(event);
         }
     });
      parentDiv.addEventListener("mouseleave", function(event) {
-        // Check if the mouse left an element with the class "product_item"
         if (event.target.classList.contains("product_item")) {
             byeThumbnail(event);
         }
@@ -55,27 +53,32 @@ filterBar.classList.remove('scrollup');}
  
 }
    function toggleThumbnail(index){
+    var heart= document.querySelector('#fav');
     var info=  document.querySelector('#info'+index);
-    setTimeout(function() {info.classList.add("fadeout")}, 1)
+    setTimeout(function() {heart.classList.add("display")}, 1);
+    setTimeout(function() {heart.classList.add("appear")}, 20);
     setTimeout(function() { if(!info.classList.contains("thumbnail")){
   info.innerHTML = `<div class="thumbnail"></div>
                     <div  class="thumbnail"></div>
                     <div  class="thumbnail"></div>
                     <div  class="thumbnail"></div>
-
                     <div  class="thumbnail" id="last">+2</div>`
     info.classList.add("thumbnail");
     }}, 100)
     setTimeout(function() {info.classList.remove("fadeout")}, 100)
     }
     function byeThumbnail(index){
+    setTimeout(function() {heart.classList.remove("display")}, 1);
+    setTimeout(function() {heart.classList.remove("appear")}, 20);
+  
+    var heart= document.querySelector('#fav');
     var info=  document.querySelector('#info'+index);
 
         info.classList.remove("thumbnail");
         info.innerHTML=`<p>Adios running shoes</p>
-                <p id="info_sub">Men's shoes</p>
-                <p id="info_sub"> 5 colors</p>`
-}
+                        <p id="info_sub">Men's shoes</p>
+                        <p id="info_sub"> 5 colors</p>`
+    }
 function openFilter(num){
 var sheet=document.querySelector('.filterSheet');
 setTimeout(function() { sheet.classList.add('begin'); }, 10);
@@ -145,7 +148,6 @@ setTimeout(function() { shadow.classList.remove('begin'); }, 400);
       </div>
 <!--phone/tablet    -->
       <div class="bigDevices-filter">
-        <i class="fa fa-filter marginleft" style=" margin-top: 10px; margin-right: 10px !important; font-size:24px; color: #3b3b3b;"></i>
 
         <div class="btn-group">
             <button style="height: 30px;  overflow: hidden !important;
