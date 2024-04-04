@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css"/>
+    
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--  -->
@@ -15,6 +16,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <link rel="stylesheet" href="./style2.css">
+<link rel="stylesheet" href="" id="styleLan">
+
 <!--  -->
 </head>
 <script type="text/javascript" src="script.js">
@@ -27,16 +30,16 @@
         <div class="width_logo">  <div class="logo">   <!-- logo --></div></div>
           <div class="menuItems">
               <!--menu items  -->
-              <div id="subM" onmouseenter="toggleMenuM()">
+            <div class="categoryM" id="subM" onmouseenter="toggleMenuM()">
                 Men
               </div>
-              <div>
+              <div class="categoryW">
                   Women
               </div>
-              <div>
+              <div class="categoryK">
                  Kids
               </div>
-              <div>
+              <div class="categoryA">
                   Accessories
               </div>
           </div>
@@ -46,7 +49,7 @@
       <div class="circles_and_search">
           <input class="txtfield" id="search" type="text" placeholder="Search">
           <container class="circles">
-          <div class="circle" id="prof">
+          <div class="circle" id="prof" onclick="toggleLanguage(); toggleLanguage2()">
           </div>
           <div class="circle" id="cart">
           </div>
@@ -66,27 +69,27 @@
 
     <ul>
       <li>
-        <a href="#" onclick="toggleMenuMs()">Men</a>
+        <a href="#" onclick="toggleMenuMs()" class="categoryM">Men</a>
       </li>
 
       <li>
-        <a href="#">Women</a>
+        <a href="#" class="categoryW">Women</a>
       </li>
 
       <li>
-        <a href="#">Kids</a>
+        <a href="#" class="categoryK">Kids</a>
       </li>
 
       <li>
-        <a href="#">Accessories</a>
+        <a href="#" class="categoryA">Accessories</a>
       </li>
 
       <li>
-        <a href="#">Boys</a>
+        <a href="#" class="categoryB">Boys</a>
       </li>
 
       <li>
-        <a href="#">Girls</a>
+        <a href="#" class="categoryG">Girls</a>
       </li>
 
 
@@ -167,7 +170,7 @@
 
 <div class="textContainer">
 <div class="textMain" id="mainText">Enhance your wardrobe with our exquisite selection.</div>
-<div class="textSub">Discover handpicked collections tailored to your individual style.</div>
+<div class="textSub" id="subText">Discover handpicked collections tailored to your individual style.</div>
 <div class="button" id="buttonMain">Explore collection</div>
 </div>
 
@@ -253,7 +256,9 @@
   <div class="product_ourstory" id="product_big_aboutus">Exclusive Collections</div>
   <div class="product_ourstory" id="p2_aboutus">Satisfied Customers</div>
 
-  <div class="product_ourstory" id="p3_aboutus">Our Story 
+  <div class="product_ourstory" id="p3_aboutus">
+   <p style="margin: 0;" id="ourSt"> Our Story </p>
+   <!-- Our Story  -->
     <p class="story">
       Welcome to Style Haven, where we believe in the power of fashion to transform and inspire. From timeless essentials to modern trends, our curated selection offers handpicked pieces to elevate your wardrobe effortlessly.
       Discover the perfect styles that reflect your unique taste and vision. At Style Haven, every detail counts, ensuring your dream wardrobe comes to life with ease. Step into a world where fashion meets individuality, and let your style story unfold.
@@ -374,10 +379,10 @@
   
             <div class="more_item" onclick="closeMore()"><i class="fa fa-angle-left" style="font-size:38px"></i></div>
             <div class="smallcontmore">
-            <div class="more_item">Men</div>
-            <div class="more_item">Women</div>
-            <div class="more_item">Kids</div>
-            <div class="more_item">Accessories</div>
+            <div class="more_item categoryM" >Men</div>
+            <div class="more_item categoryW">Women</div>
+            <div class="more_item categoryK">Kids</div>
+            <div class="more_item categoryA">Accessories</div>
           </div>
       </div>
      
