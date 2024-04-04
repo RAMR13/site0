@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded",function(){
    myCarousel = document.querySelector('#hero-carousel')
    textDiv = document.getElementById("mainText");
    morepg=document.getElementById("more_pg");
-   stylez=document.getElementById("styleLan3");
+   stylez=document.getElementById("styleLan");
 
 });
 
