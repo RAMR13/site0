@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Readex+Pro:wght@160..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    font-family: "Readex Pro", sans-serif !important;
+    text-align: right;
+}
+body{
+    direction: rtl ;
+}
+#t1{
+    text-align: center;
+}
+#t2{
+    text-align: center;
+}
+.width_logo {
+    margin-left: 0px;
+    margin-right: 60px;
+}
+.circles_and_search{
+    margin-left: 60px;
+    margin-right:0px;
+}
+.textContainer{
+    padding-left: 0;
+    padding-right: 50px;
+    
+}
+#search{
+    padding-left: 25px;
+    padding-right: 1.9rem;
+
+    
+}
+@media (max-width: 480px){
+    .width_logo {
+        margin-right: 20px;
+        margin-left: 0px;
+    }
+    .circles_and_search{
+        margin-right:0px;
+        margin-left: 20px;
+    }
+}
+@media (min-width: 481px) and (max-width: 1200px){
+.width_logo {
+    margin-right: 20px;
+    margin-left: 0px;
+}
+.circles_and_search{
+    margin-right:0px;
+    margin-left: 20px;
+}
+}

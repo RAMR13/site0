@@ -352,6 +352,8 @@ grid-template-rows: 1fr 1fr;
     background-size:cover;
     background-position: center center; 
     grid-row: span 2;
+    display: flex;
+    justify-content: space-between;
 }
 
 #p2{
@@ -383,6 +385,8 @@ grid-template-rows: 1fr 1fr;
     background-size:cover;
     background-position: center center;       
     background-repeat:no-repeat;
+    display: flex;
+    justify-content: space-between;
 }
 .mostpop-container{
     display: flex;
