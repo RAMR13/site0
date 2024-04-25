@@ -43,7 +43,7 @@ margin: 20px;
     width: 100%;
 }
 .logo{
-    background: url("./assets/tujargo w.png") ;
+    background: url("./assets/logo w.png") ;
 background-repeat: no-repeat;
     background-size:100%;
     background-position: center;
@@ -602,7 +602,7 @@ width: 30px;
 }
 #footer-logo{
     height: 50px;
-    background: url(./assets/tujargo\ 1.png);
+    background: url(./assets/logo\ 1.png);
     background-repeat: no-repeat;
     background-size:100%;
     margin-left: 0;
